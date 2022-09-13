@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/074537d5db.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas">
+    </canvas>
+    <div id="toolbar">
+        <section class="file hoverMenu">
+            <i class="fa-solid fa-file"></i>
+            <ul>
+                <li><i class="fa-solid fa-plus"></i></li>
+                <li><i class="fa-solid fa-folder-open"></i></li>
+                <li><i class="fa-solid fa-trash"></i></li>
+                <li><i class="fa-solid fa-download"></i></li>
+            </ul>
+        </section>
+        <section class="shape hoverMenu">
+            <i class="fa-solid fa-shapes"></i>
+            <ul>
+                <li ><i id="rect" class="fa-solid fa-square-full"></i></li>
+                <li ><i id="line" class="fa-solid fa-grip-lines"></i></li>
+                <li ><i id="circle" class="fa-solid fa-circle"></i></li>
+                <li ><i id="triangle" class="fa-solid fa-play"></i></li>
+            </ul>
+        </section>
+        <section class="text hoverMenu">
+            <i class="fa-solid fa-font"></i>
+            
+            <ul>
+                <li>New</li>
+                <li>Open</li>
+                <li>Delete</li>
+                <li>Save</li>
+            </ul>
+        </section>
+        <section class="brush hoverMenu">
+            <i class="fa-solid fa-brush"></i>
+            <ul>
+                <li><i class="fa-solid fa-palette"></i></li>
+                <li><input type="number" id="strokeSize" value="2" min="1" max="20" ></li>
+                <li><i class="fa-regular fa-square-full"></i></li>
+                <li><i class="fa-solid fa-fill-drip"></i></li>
+            </ul>
+        </section>
+    </div>
+
+    <div id="quickTools">
+        
+            <section class="select"></section>
+        <section class="color"> 
+            <input type="color" id="colorPicker" value="">
+        </section>
+        <section class="eraser"></section>
+        <section class="text2"></section>
+    </div>
+   
+    <script type="module" src="index.js"></script>
+    <script type="module" src="drawing.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+body{
+    max-width: 100%;
+    min-height: 100vh;
+    position:relative;
+}
+#toolbar{
+    position:fixed;
+    z-index: 1;
+    left: 0;
+    top:50%;
+    z-index: 2;
+    width: 50px;
+    border-radius: 10px;
+   background-color:yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    transition:all .5s ease-in;
+    gap:30px;
+}
+.hoverMenu{
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}
+.hoverMenu i{
+    font-size: 30px;
+}
+.hoverMenu i:hover{
+    color: black;
+    text-shadow: 0 0 15px white,0 0 15px white,0 0 15px white;
+}
+
+
+.hoverMenu ul{
+    list-style: none;
+    padding:5px 5px 5px 15px;
+    position:absolute;
+    z-index: -1;
+    top:0;
+    left:100%;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    visibility: hidden;
+    border-radius:0 10px 10px 0;
+    background-color: yellowgreen;
+}
+.hoverMenu ul li{
+    background-color: yellowgreen;
+}
+
+.hoverMenu ul li i{
+    font-size: 20px;
+}
+
+
+.hoverMenu:hover > ul, ul:hover > li {
+    visibility: visible;
+}
+
+.brush ul li input[type="number"]{
+    
+    border: 2px solid white;
+    border-radius: 2px;
+    color: black;
+    width: 50px;
+}
+
+
+
+
+#quickTools{
+    position:fixed;
+    left: 100px;
+    top: 100px;
+    z-index: 20;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: greenyellow;
+}
+
+
+.select, .color, .eraser, .text2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 119, 28);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.select:hover, .color:hover, .eraser:hover, .text2:hover{
+    background-color: white;
+    
+    }
+
+.select{
+    transform: translate(17px, 17px);
+}
+.color{
+    transform: translate(53px,-13px);
+}
+.eraser{
+    transform: translate(17px,-8px);
+}
+.text2{
+    transform: translate(53px,-38px);
+}
+
+.select:hover i,.color:hover i,.eraser:hover i,.text2 i{
+    color:black;
+}
+
+
+
